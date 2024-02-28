@@ -31,9 +31,11 @@ describe('Ecommerce', () => {
   it('Add product', () => {
     cy.get('.div-input').type("iphone 11 case");
     cy.get('.search-btn > .suiiconfont-critical').click();
-    //cy.get('([aria-label="ADD TO CART"][1])').click();
-    //cy.xpath('//button[@aria-label="ADD TO CART"])[1]').click();
-    cy.get('[data-expose-id="0-22864377"] > .product-card__bottom-wrapper > .product-card__goods-title-container > .goods-title-link').click();
+    cy.xpath('//*[@id="product-list-v2"]/div/div[2]/div[2]/section/div[1]/section[1]/div[2]/div[3]/button').click();
+    cy.get('.j-product-intro__size-radio-spopover_87_index18 > .product-intro__size-radio > .product-intro__size-radio-inner').click();
+    cy.get('.quantity-box > input').type("5");
+    cy.get('.goods-btn__add > span').click();
+
   })
 
 });
